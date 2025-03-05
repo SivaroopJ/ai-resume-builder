@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resume Builder</h1>
+    <form id="resumeForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="education">Education:</label><br>
+        <input type="text" id="education" name="education" required><br>
+
+        <label for="qualifications">Qualifications:</label><br>
+        <input type="text" id="qualifications" name="qualifications" required><br>
+
+        <label for="experience">Experience:</label><br>
+        <textarea id="experience" name="experience" required></textarea><br>
+
+        <label for="role">Desired Role:</label><br>
+        <input type="text" id="role" name="role" required><br>
+
+        <label for="github">GitHub Username:</label><br>
+        <input type="text" id="github" name="github" required><br>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+    <div id="preview"></div>
+    <script src="script.js"></script>
+    <!-- Add html2pdf.js later for PDF generation -->
+</body>
+</html>
