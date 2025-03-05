@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>Resume Builder</h1>
+    
+    <div class="color_mode">   
+        <span class="controller">Dark Mode </span>
+    </div>
+
     <form id="resumeForm">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br>
@@ -29,8 +34,9 @@
 
         <button type="submit">Generate Resume</button>
     </form>
+
     <div id="preview"></div>
-    <script src="script.js"></script>
-    <!-- Add html2pdf.js later for PDF generation -->
+
+    <script src="ripple.js"></script>
 </body>
 </html>

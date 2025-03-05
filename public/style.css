@@ -1,18 +1,29 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    color: black;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    transition: background 0.3s, color 0.3s;
 }
+
 h1 {
     text-align: center;
+    font-weight: 900;
     color: #333;
 }
+
 label {
     display: inline-block;
     width: 150px;
     margin: 10px 0;
+    font-weight: 700;
 }
+
 input, textarea {
     width: 300px;
     padding: 8px;
@@ -20,10 +31,12 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 textarea {
     height: 100px;
     resize: vertical;
 }
+
 button {
     background-color: #007bff;
     color: white;
@@ -32,12 +45,79 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #0056b3;
 }
-#preview {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+/* Gradient Background Animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Dark Mode */
+body.dark {
+    background: black;
+    color: white;
+}
+
+/* Dark Mode Button */
+.controller {
+    text-align: center;
+    min-width: 120px;
+    padding: 10px 15px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid black;
+    text-transform: uppercase;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    z-index: 500;
+    background: white;
+    color: black;
+    border-radius: 8px;
+}
+
+body.dark .controller {
+    background: black;
+    color: white;
+    border: 3px solid white;
+}
+
+/* Ripple Effect */
+.ripple {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transform: scale(0);
+}
+
+/* Ripple Animation */
+.animate {
+    animation: ripple-mo 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes ripple-mo {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+/* Ripple Effect in Dark Mode */
+body.dark .ripple {
+    background: rgba(255, 255, 255, 0.5);
 }
