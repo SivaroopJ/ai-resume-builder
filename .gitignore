@@ -1,3 +1,8 @@
 node_modules/
 *.log
 .env
+
+# Backend-specific
+backend/node_modules
+backend/*.log
+backend/.env
